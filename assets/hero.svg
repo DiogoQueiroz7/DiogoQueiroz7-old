@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" fill="none" role="img" aria-label="Diogo Queiroz — Full-Stack Developer">
+  <defs>
+    <!-- Gradiente animado do título -->
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00d9ff">
+        <animate attributeName="stop-color" values="#00d9ff;#7c3aed;#39d353;#00d9ff" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.5" stop-color="#7c3aed">
+        <animate attributeName="stop-color" values="#7c3aed;#39d353;#00d9ff;#7c3aed" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#39d353">
+        <animate attributeName="stop-color" values="#39d353;#00d9ff;#7c3aed;#39d353" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .title { font: 800 52px 'Segoe UI','Helvetica Neue',Arial,sans-serif; letter-spacing: 3px; }
+      .sub   { font: 600 19px 'Fira Code','Courier New',monospace; letter-spacing: 5px; }
+      .tag   { font: 500 13px 'Fira Code','Courier New',monospace; letter-spacing: 2px; }
+      @keyframes floaty { 0%,100% { transform: translateY(0);   opacity:.45 } 50% { transform: translateY(-16px); opacity:1 } }
+      @keyframes draw   { from { stroke-dashoffset: 520 } to { stroke-dashoffset: 0 } }
+      @keyframes fade   { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: translateY(0) } }
+      @keyframes blink  { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
+      @keyframes pulse  { 0%,100% { opacity: .06 } 50% { opacity: .16 } }
+      @keyframes breathe{ 0%,100% { opacity: .25 } 50% { opacity: .6 } }
+      .p1 { animation: floaty 6s   ease-in-out infinite; }
+      .p2 { animation: floaty 7.5s ease-in-out .8s infinite; }
+      .p3 { animation: floaty 5.5s ease-in-out .4s infinite; }
+      .p4 { animation: floaty 8s   ease-in-out 1.2s infinite; }
+      .p5 { animation: floaty 6.8s ease-in-out .2s infinite; }
+      .p6 { animation: floaty 7s   ease-in-out 1.6s infinite; }
+      .p7 { animation: floaty 5.8s ease-in-out 1s infinite; }
+      .p8 { animation: floaty 8.5s ease-in-out .6s infinite; }
+      .ul { stroke-dasharray: 520; animation: draw 2.4s ease-out forwards; }
+      .sub{ opacity: 0; animation: fade 1.2s ease-out .7s forwards; }
+      .tagL { opacity: 0; animation: fade 1s ease-out 1.4s forwards; }
+      .cur { animation: blink 1.05s step-end infinite; }
+      .grid { animation: pulse 5s ease-in-out infinite; }
+      .halo { animation: breathe 6s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="850" height="240" rx="14" fill="url(#bg)"/>
+  <ellipse class="halo" cx="425" cy="118" rx="360" ry="120" fill="url(#halo)"/>
+
+  <!-- Grade sutil -->
+  <g class="grid" stroke="#c9d1d9" stroke-width="1">
+    <path d="M0 60 H850 M0 120 H850 M0 180 H850"/>
+    <path d="M120 0 V240 M290 0 V240 M425 0 V240 M560 0 V240 M730 0 V240"/>
+  </g>
+
+  <!-- Cantos / brackets -->
+  <g stroke="#00d9ff" stroke-width="2.5" fill="none" opacity="0.8">
+    <path d="M22 22 h34 M22 22 v34"/>
+    <path d="M828 22 h-34 M828 22 v34"/>
+    <path d="M22 218 h34 M22 218 v-34"/>
+    <path d="M828 218 h-34 M828 218 v-34"/>
+  </g>
+
+  <!-- Partículas flutuantes -->
+  <g>
+    <circle class="p1" cx="95"  cy="70"  r="4"   fill="#00d9ff"/>
+    <circle class="p2" cx="760" cy="60"  r="3.5" fill="#7c3aed"/>
+    <circle class="p3" cx="150" cy="175" r="3"   fill="#39d353"/>
+    <circle class="p4" cx="700" cy="185" r="4.5" fill="#00d9ff"/>
+    <circle class="p5" cx="60"  cy="130" r="2.5" fill="#7c3aed"/>
+    <circle class="p6" cx="795" cy="140" r="3"   fill="#39d353"/>
+    <circle class="p7" cx="230" cy="55"  r="2.5" fill="#39d353"/>
+    <circle class="p8" cx="620" cy="48"  r="3"   fill="#00d9ff"/>
+  </g>
+
+  <!-- Título -->
+  <text class="title" x="425" y="112" text-anchor="middle" fill="url(#txt)" filter="url(#glow)">DIOGO QUEIROZ</text>
+
+  <!-- Sublinhado que se desenha -->
+  <line class="ul" x1="165" y1="134" x2="685" y2="134" stroke="url(#txt)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Subtítulo -->
+  <text class="sub" x="425" y="172" text-anchor="middle" fill="#c9d1d9">&lt;/&gt; FULL-STACK DEVELOPER</text>
+
+  <!-- Linha de tags -->
+  <text class="tag tagL" x="425" y="204" text-anchor="middle" fill="#8b949e">
+    Software · Web · Mobile · Data<tspan class="cur" fill="#39d353" dx="6">_</tspan>
+  </text>
+</svg>
