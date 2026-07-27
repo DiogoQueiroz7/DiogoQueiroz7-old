@@ -185,4 +185,4 @@ const diogo = {
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:39d353,50:7c3aed,100:00d9ff&height=120&section=footer" alt="footer"/>
 
-</div>
+</div> 
